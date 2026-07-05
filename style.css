@@ -6,6 +6,7 @@
     --text-dark: #333333;
     --text-light: #f8f9fa;
     --bg-light: #f4f7f6;
+    --alert-color: #ffb300; /* Warning Color for Coming Soon */
 }
 
 * {
@@ -31,243 +32,9 @@ body {
 
 /* Header & Navigation */
 header {
-    background: var(--primary-color);
+    background: #000000; /* Black Header Background */
     color: var(--text-light);
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo h1 {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-.logo h1 span {
-    color: var(--accent-color);
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--accent-color);
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(13, 35, 58, 0.85), rgba(26, 58, 95, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
-    height: 70vh;
-    color: var(--text-light);
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-content h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn {
-    display: inline-block;
-    background: var(--accent-color);
-    color: var(--primary-color);
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-    background: #0097a7;
-    transform: translateY(-2px);
-}
-
-/* Section Templates */
-.about, .services, .contact {
-    padding: 80px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.section-title h2::after {
-    content: '';
-    width: 50px;
-    height: 3px;
-    background: var(--accent-color);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* About Section */
-.about {
-    background: var(--bg-light);
-    text-align: center;
-}
-
-.about p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-
-/* Services Section */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    text-align: center;
-    transition: transform 0.3s ease;
-    border-top: 4px solid var(--primary-color);
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    border-top-color: var(--accent-color);
-}
-
-.service-card .icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-/* Contact Section */
-.contact {
-    background: var(--bg-light);
-    text-align: center;
-}
-
-.contact-info {
-    margin-top: 20px;
-    font-size: 1.2rem;
-}
-
-.contact-info p {
-    margin: 15px 0;
-}
-
-.contact-info i {
-    color: var(--primary-color);
-    margin-right: 10px;
-}
-
-/* Footer */
-footer {
-    background: var(--primary-color);
-    color: var(--text-light);
-    text-align: center;
-    padding: 30px 0;
-    font-size: 0.9rem;
-}
-
-/* Responsive Styles */
-@media(max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
-    nav ul {
-        margin-top: 15px;
-    }
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-}
-
-
-/* Base Variables & Reset */
-:root {
-    --primary-color: #0d233a; /* Deep Navy Blue */
-    --secondary-color: #1a3a5f; /* Lighter Accent Navy */
-    --accent-color: #00bcd4; /* High-tech Cyan Accent */
-    --text-dark: #333333;
-    --text-light: #f8f9fa;
-    --bg-light: #f4f7f6;
-    --alert-color: #ffb300; /* Distinct Warning Color for Construction Notice */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    color: var(--text-dark);
-    line-height: 1.6;
-    background-color: #ffffff;
-}
-
-.container {
-    width: 85%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Header & Navigation */
-header {
-    background: #000000; /* Explicitly Modified Header Background to Black */
-    color: var(--text-light);
-    padding: 10px 0;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -280,14 +47,13 @@ header {
     align-items: center;
 }
 
-/* Image Logo Restrictions */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo-img {
-    height: 65px; /* Ensures clean scale rendering regardless of source size */
+    height: 65px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -313,30 +79,45 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(13, 35, 58, 0.88), rgba(26, 58, 95, 0.88)), url('https://unsplash.com') no-repeat center center/cover;
-    height: 70vh;
-    color: var(--text-light);
-    display: flex;
-    align-items: center;
+/* [NEW] Main Picture Visual Layout */
+.main-picture-container {
+    background-color: #ffffff;
+    padding: 40px 0 20px 0; /* 로고 아래에 적당한 여백 배치 */
+    text-align: center;
+}
+
+.main-featured-img {
+    width: 100%;
+    max-height: 500px; /* 대형 화면에서 그림이 너무 거대해지지 않도록 제한 */
+    object-fit: cover; /* 프레임에 맞춰 예쁘게 잘라냄 */
+    border-radius: 8px; /* 모서리를 살짝 둥글게 처리 */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* 고급스러운 부드러운 그림자 효과 */
+}
+
+/* [NEW] Hero Text Layout (텍스트가 가독성 높게 표시되도록 배경 처리) */
+.hero-text-section {
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%);
+    padding: 40px 0 60px 0;
     text-align: center;
 }
 
 .hero-content h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 2.6rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 35px;
+    color: #555555;
+    margin-bottom: 30px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Updated Status Label UI Structure */
+/* Status Label UI Structure */
 .btn.status-banner {
     display: inline-block;
     background: var(--alert-color);
@@ -348,7 +129,7 @@ nav ul li a:hover {
     border-radius: 5px;
     border: 1px solid #cca100;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .btn.status-banner i {
@@ -468,6 +249,9 @@ footer {
         margin-top: 5px;
     }
     .hero-content h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    .main-picture-container {
+        padding: 20px 0 10px 0;
     }
 }
